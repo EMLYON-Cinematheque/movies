@@ -23456,18 +23456,19 @@ let listeFilms = [
   }
 ];
 
-let divFilmes = document.getElementById('carousel-track')
+
+let divFilmes = document.querySelector('.carousel-track')
 
 
 function aficherFilme(divFilmes){
   listeFilms.forEach(filme => {
     let title = filme.title
-    let  yers = filme.year
+    let  year = filme.year
     let genres = filme.genres
     let extract = filme.extract
     let thumbnail = filme.thumbnail
 
-    let divFilme = `<div class="card"><h2>${title}</h2><h3>Date : ${yers}</h3><h3>Genre : ${genres}</h3></div>`
+    let divFilme = `<div class="card"><h2>${title}</h2><h3>Date : ${year}</h3><h3>Genre :${genres}</h3></div>`;
 
     divFilmes.insertAdjacentHTML('afterbegin', divFilme);
   });
