@@ -23456,6 +23456,24 @@ let listeFilms = [
   }
 ];
 
+let divFilmes = document.getElementById('carousel-track')
+
+
+function aficherFilme(divFilmes){
+  listeFilms.forEach(filme => {
+    let title = filme.title
+    let  yers = filme.year
+    let genres = filme.genres
+    let extract = filme.extract
+    let thumbnail = filme.thumbnail
+
+    let divFilme = `<div class="card"><h2>${title}</h2><h3>Date : ${yers}</h3><h3>Genre : ${genres}</h3></div>`
+
+    divFilmes.insertAdjacentHTML('afterbegin', divFilme);
+  });
+}
+
+aficherFilme(divFilmes)
 // Afficher tous les films (Titre, Poster, Année, + si envie)
 
 //Faire un bouton qui permet de choisir un film aléatoire à regarder ce soir
